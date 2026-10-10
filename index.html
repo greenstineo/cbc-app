@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBC Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>CBC Management Portal</h1>
+    <h2>Learner Assessment Tracker</h2>
+  </header>
+
+  <main>
+    <form id="assessmentForm">
+      <label for="learnerName">Learner Name:</label>
+      <input type="text" id="learnerName" placeholder="Enter learner full name">
+
+      <label for="level">Education Level:</label>
+      <select id="level">
+        <option value="">-- Select Level --</option>
+      </select>
+
+      <label for="grade">Grade / Class:</label>
+      <select id="grade">
+        <option value="">-- Select Grade --</option>
+      </select>
+
+      <label for="subject">Learning Area / Subject:</label>
+      <select id="subject">
+        <option value="">-- Select Learning Area --</option>
+      </select>
+
+      <label for="strand">Strand / Sub-strand:</label>
+      <select id="strand">
+        <option value="">-- Select Strand --</option>
+      </select>
+
+      <label for="performanceLevel">Performance Level:</label>
+      <select id="performanceLevel">
+        <option value="EE">Exceeds Expectations (EE)</option>
+        <option value="ME">Meets Expectations (ME)</option>
+        <option value="AE">Approaches Expectations (AE)</option>
+        <option value="BE">Below Expectations (BE)</option>
+      </select>
+
+      <label for="remarks">Teacher Remarks / Rubric Notes:</label>
+      <textarea id="remarks" rows="3" placeholder="Add specific observation details..."></textarea>
+
+      <button type="button" id="saveBtn">Save Assessment Record</button>
+      <button type="button" id="exportBtn" style="background-color: #2980b9; margin-top: 10px;">Export Assessment Records (CSV)</button>
+    </form>
+  </main>
+
+  <!-- Load curriculum dataset first, then application logic -->
+  <script src="curriculum.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
+
+
