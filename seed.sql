@@ -16,4 +16,4 @@ INSERT INTO learners (admission_no, full_name, grade_level, gender) VALUES
 ('ADM-002', 'Achieng Barasa', 'Grade 4', 'Female');
 
 INSERT INTO assessments (learner_id, sub_strand_id, rating, rubric_level, remarks) VALUES 
-(1, 1, 4, 'EE', 'Accurately counted and wrote numbers beyond 10,000 independently.');
+(1, 1, 8, 'EE1', 'Exceeds expectations consistently with complete independence.');

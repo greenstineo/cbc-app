@@ -1,12 +1,17 @@
 /**
- * CBC Assessment Portal - Local Data Access Layer
+ * CBC Assessment Portal - Local Data Access Layer (8-Level Rubric)
  */
 
 const CBC_DB = {
-  // Convert numeric ratings (1-4) to standard CBC Rubric codes
+  // Map numeric rating (1-8) to 8-level CBC Rubric codes
   getRubricLevel(rating) {
-    const levels = { 4: 'EE', 3: 'ME', 2: 'AE', 1: 'BE' };
-    return levels[rating] || 'ME';
+    const levels = {
+      8: 'EE1', 7: 'EE2',
+      6: 'ME1', 5: 'ME2',
+      4: 'AE1', 3: 'AE2',
+      2: 'BE1', 1: 'BE2'
+    };
+    return levels[rating] || 'ME1';
   },
 
   state: {
@@ -15,7 +20,7 @@ const CBC_DB = {
   },
 
   init() {
-    console.log("CBC Database Module loaded successfully.");
+    console.log("CBC Database Module initialized with 8-Level Rubric.");
   },
 
   addLearner(admNo, name, grade, gender) {
